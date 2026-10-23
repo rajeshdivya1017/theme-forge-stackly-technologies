@@ -368,18 +368,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Restart the original laptop animation.
   void preloader.offsetWidth;
 
-  await wait(1000);
+  await wait(350);
 
   preloader.classList.add("is-rotating");
 
-  await wait(1950);
+  await wait(600);
 
   if (loadingMessage) {
     loadingMessage.textContent = "LOADING YOUR EXPERIENCE";
   }
 
   // Animate the progress percentage.
-  const duration = 2200;
+  const duration = 800;
   const startTime = performance.now();
 
   await new Promise((resolve) => {
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingMessage.textContent = "WELCOME TO STACKLY TECHNOLOGY";
   }
 
-  await wait(350);
+  await wait(200);
 
   // Keep the loader visible until navigation starts.
   if (destination) {

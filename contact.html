@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050b18">
+
+
+<title>Contact Us | STACKLY Technologies</title>
+
+<meta
+    name="description"
+    content="Contact STACKLY Technologies for IT support, web development, cybersecurity, cloud solutions and other technology enquiries."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="contact.css">
+
+
+</head>
+
+<body class="is-loading contact-page">
+
+
+<!-- ========================================
+     ORIGINAL STACKLY 3D LAPTOP PRELOADER
+========================================= -->
+
+<div
+    class="site-preloader"
+    id="sitePreloader"
+    role="status"
+    aria-label="Loading STACKLY Technology"
+>
+    <div class="preloader-content">
+
+        <div class="preloader-brand">
+            <span class="preloader-brand-mark">S</span>
+
+            <div>
+                <span class="preloader-brand-name">STACKLY</span>
+                <span class="preloader-brand-subtitle">TECHNOLOGY</span>
+            </div>
+        </div>
+
+        <p class="preloader-caption">INNOVATION STARTS HERE</p>
+
+        <div class="preloader-orbit">
+            <div class="preloader-ring preloader-ring-one"></div>
+            <div class="preloader-ring preloader-ring-two"></div>
+
+            <div class="laptop-scene">
+                <div class="laptop-3d" id="laptop3D">
+
+                    <div class="laptop-screen">
+                        <div class="laptop-screen-display">
+                            <span class="laptop-screen-logo">S</span>
+                            <span class="laptop-screen-line"></span>
+                            <span class="laptop-screen-line short"></span>
+                        </div>
+
+                        <div class="laptop-screen-back">
+                            <span>STACKLY</span>
+                        </div>
+                    </div>
+
+                    <div class="laptop-base">
+                        <div class="laptop-keyboard"></div>
+                        <div class="laptop-trackpad"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <p class="preloader-message" id="loadingMessage">
+            PREPARING YOUR EXPERIENCE
+        </p>
+
+        <div class="preloader-progress-info">
+            <span>LOADING</span>
+            <span id="loadingPercent">0%</span>
+        </div>
+
+        <div class="preloader-progress-track">
+            <div
+                class="preloader-progress-bar"
+                id="loadingProgress"
+            ></div>
+        </div>
+
+        <p class="preloader-footer">
+            TECHNOLOGY THAT MOVES YOU FORWARD
+        </p>
+
+    </div>
+</div>
+
+
+<!-- ========================================
+     CONTACT PAGE HEADER
+========================================= -->
+
+<header class="contact-header">
+    <a
+        href="index.html"
+        class="contact-brand"
+        aria-label="STACKLY Technologies Home"
+    >
+        <img
+            src="assets/stackly%20logo.webp"
+            alt="STACKLY Technologies"
+        >
+    </a>
+</header>
+
+
+<!-- ========================================
+     MAIN CONTENT
+========================================= -->
+
+<main id="mainContent">
+
+    <section
+        class="contact-main-section"
+        id="contactFormSection"
+    >
+
+        <div class="contact-section-heading">
+            <span class="contact-eyebrow">CONTACT OUR TEAM</span>
+
+            <h2>
+                How Can We
+                <span>Help You?</span>
+            </h2>
+
+            <p>
+                Send us your enquiry and our team will get back to you.
+            </p>
+        </div>
+
+
+        <div class="contact-layout">
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-card">
+
+                <div class="contact-card-heading">
+                    <h3>Send Us a Message</h3>
+
+                    <p>
+                        Fill in the details below to get started.
+                    </p>
+                </div>
+
+
+                <form id="contactForm">
+
+                    <div class="contact-input-row">
+
+                        <div class="contact-field">
+                            <label for="contactName">Full Name *</label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="contact-field">
+                            <label for="contactEmail">Email Address *</label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-input-row">
+
+                        <div class="contact-field">
+                            <label for="contactPhone">Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                            >
+                        </div>
+
+
+                        <div class="contact-field">
+                            <label for="contactSubject">Subject *</label>
+
+                            <select
+                                id="contactSubject"
+                                name="subject"
+                                required
+                            >
+                                <option value="">Select a subject</option>
+                                <option value="General Enquiry">General Enquiry</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="App Development">App Development</option>
+                                <option value="Cybersecurity">Cybersecurity</option>
+                                <option value="Cloud Solutions">Cloud Solutions</option>
+                                <option value="Other Services">Other Services</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-field">
+                        <label for="contactMessage">Your Message *</label>
+
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us about your requirements..."
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <label class="contact-consent">
+                        <input
+                            type="checkbox"
+                            id="contactConsent"
+                            name="consent"
+                            required
+                        >
+
+                        <span>
+                            I agree to be contacted by the STACKLY team
+                            regarding my enquiry.
+                        </span>
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="contact-submit-button"
+                        id="contactSubmit"
+                    >
+                        <span id="contactSubmitText">Submit Enquiry</span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+
+                    <p class="contact-form-note">
+                        * Required fields
+                    </p>
+
+                </form>
+
+            </div>
+
+
+            <!-- COMPANY INFORMATION -->
+
+            <aside class="contact-info-column">
+
+                <!-- UPDATED OFFICE ADDRESS -->
+
+                <div class="contact-info-card">
+
+                    <span
+                        class="contact-info-icon"
+                        aria-hidden="true"
+                    >⌖</span>
+
+                    <div>
+                        <h3>Our Office</h3>
+
+                        <p>
+                            STACKLY Technologies<br>
+                            MMR Complex,<br>
+                            Near Chinna Muriyapankovil,<br>
+                            Salem – 636008,<br>
+                            Tamil Nadu, India.
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=STACKLY+Technologies%2C+MMR+Complex%2C+Near+Chinna+Muriyapankovil%2C+Salem+636008%2C+India"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-text-link"
+                        >
+                            Get Directions →
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL ENQUIRIES -->
+
+                <div class="contact-info-card">
+
+                    <span
+                        class="contact-info-icon"
+                        aria-hidden="true"
+                    >✉</span>
+
+                    <div>
+                        <h3>Email Enquiries</h3>
+
+                        <p>
+                            Have a question? Send your enquiry through
+                            our contact form.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- COMMITMENT -->
+
+                <div class="contact-info-card">
+
+                    <span
+                        class="contact-info-icon"
+                        aria-hidden="true"
+                    >◷</span>
+
+                    <div>
+                        <h3>Our Commitment</h3>
+
+                        <p>
+                            Our team will review your enquiry and
+                            contact you as soon as possible.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- UPDATED GOOGLE MAP -->
+
+                <div class="contact-map-card">
+
+                    <div class="contact-map-heading">
+                        <h3>Find Our Location</h3>
+                        <p>MMR Complex, Salem, Tamil Nadu – 636008</p>
+                    </div>
+
+                    <iframe
+                        title="STACKLY Technologies Office Location"
+                        src="https://maps.google.com/maps?q=MMR+Complex%2C+Near+Chinna+Muriyapankovil%2C+Salem+636008%2C+India&z=15&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ========================================
+     CONTACT FOOTER
+========================================= -->
+
+<footer class="contact-footer">
+
+    <p>© 2026 STACKLYIT. All rights reserved.</p>
+
+    <nav
+        class="contact-footer-links"
+        aria-label="Legal links"
+    >
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+    </nav>
+
+</footer>
+
+
+<!-- ========================================
+     SUCCESS MODAL
+========================================= -->
+
+<div
+    class="contact-success-overlay"
+    id="contactSuccess"
+    aria-hidden="true"
+>
+    <div
+        class="contact-success-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successTitle"
+    >
+
+        <img
+            src="assets/stackly%20logo.webp"
+            alt="STACKLY Technologies"
+            class="success-logo"
+        >
+
+        <div class="success-check" aria-hidden="true">✓</div>
+
+        <span class="contact-eyebrow">ENQUIRY RECEIVED</span>
+
+        <h2 id="successTitle">Thank You!</h2>
+
+        <p>
+            Your enquiry has been submitted successfully.
+            Our team members will contact you as soon as possible.
+        </p>
+
+        <button
+            type="button"
+            id="successClose"
+            class="contact-submit-button"
+        >
+            Back to Contact Page
+        </button>
+
+    </div>
+</div>
+
+
+<!-- EXISTING WEBSITE JAVASCRIPT -->
+
+<script src="script.js"></script>
+<script src="contact.js"></script>
+
+
+</body>
+</html>

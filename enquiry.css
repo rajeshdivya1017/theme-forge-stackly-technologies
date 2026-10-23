@@ -1,0 +1,605 @@
+
+/* ==========================================
+   STACKLY — ENQUIRY PAGE
+   Page-specific styles
+========================================== */
+
+.enquiry-page {
+  min-height: 70vh;
+  padding: 64px 20px 80px;
+  background: var(--bg, #080b10);
+  color: var(--white, #f5f7fa);
+}
+
+.enquiry-container {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+/* ---------- PAGE HEADING ---------- */
+
+.enquiry-heading {
+  max-width: 680px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.enquiry-eyebrow {
+  margin: 0 0 12px;
+  color: var(--teal, #65d4b7);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.enquiry-heading h1 {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--teal, #65d4b7);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  letter-spacing: 0.07em;
+}
+
+.enquiry-heading > p:last-child {
+  margin: 16px auto 0;
+  color: var(--muted, #a2adb9);
+  line-height: 1.7;
+}
+
+/* ---------- ENQUIRY TABS ---------- */
+
+.enquiry-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.enquiry-tab {
+  padding: 15px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: #111923;
+  color: #c2ccd6;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.enquiry-tab:hover {
+  border-color: var(--teal, #65d4b7);
+  box-shadow: 0 6px 20px rgba(101, 212, 183, 0.12);
+  transform: translateY(-2px);
+}
+
+.enquiry-tab.active {
+  border-color: var(--teal, #65d4b7);
+  background: var(--teal, #65d4b7);
+  color: #07110f;
+}
+
+/* ---------- ENQUIRY FORM ---------- */
+
+.enquiry-form {
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #f9fafb;
+  color: #20262d;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.22);
+}
+
+.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.form-heading-mark {
+  display: grid;
+  flex: 0 0 46px;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #10232b;
+  color: var(--teal, #65d4b7);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.form-heading h2 {
+  margin: 0 0 5px;
+  font-size: 1.18rem;
+}
+
+.form-heading p {
+  margin: 0;
+  color: #6e7882;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 26px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.form-field label {
+  color: #343c45;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.form-field label span {
+  color: #c34444;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #c8cdd2;
+  border-radius: 2px;
+  outline: none;
+  background: #fff;
+  color: #20262d;
+  font: inherit;
+  font-size: 0.88rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+  min-height: 46px;
+}
+
+.form-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #218f83;
+  box-shadow: 0 0 0 3px rgba(33, 143, 131, 0.12);
+}
+
+.service-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 26px;
+  margin: 23px 0;
+}
+
+.service-fields .form-field {
+  animation: fieldIn 0.3s ease both;
+}
+
+.form-field-full {
+  margin-top: 4px;
+}
+
+@keyframes fieldIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SUBMIT BUTTON ---------- */
+
+.submit-enquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px 20px;
+  border: 0;
+  background: #10232b;
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.submit-enquiry:hover {
+  background: #147e75;
+  box-shadow: 0 8px 24px rgba(20, 126, 117, 0.2);
+  transform: translateY(-2px);
+}
+
+.submit-enquiry span {
+  font-size: 1.2rem;
+}
+
+.privacy-note {
+  margin: 15px 0 0;
+  color: #7c858e;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.form-error {
+  min-height: 0;
+  margin: 12px 0 0;
+  color: #b42318;
+  font-size: 0.85rem;
+}
+
+.form-error:not(:empty) {
+  padding: 10px 12px;
+  border-left: 3px solid #b42318;
+  background: #fff0ef;
+}
+
+/* ==========================================
+   NEXT STEPS
+   HOVER EFFECTS FOR 01, 02, 03
+========================================== */
+
+.next-steps {
+  padding-top: 42px;
+  text-align: center;
+}
+
+.next-steps > h2 {
+  margin: 0 0 25px;
+  font-size: 1.15rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* Individual step card */
+
+.step-card {
+  padding: 20px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Card hover */
+
+.step-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(101, 212, 183, 0.28);
+  background: rgba(101, 212, 183, 0.045);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Number circle */
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 13px;
+  border: 1px solid var(--teal, #65d4b7);
+  border-radius: 50%;
+  color: var(--teal, #65d4b7);
+  font-weight: 800;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Number hover */
+
+.step-card:hover .step-number {
+  transform: scale(1.1);
+  background: var(--teal, #65d4b7);
+  color: #07110f;
+  box-shadow: 0 0 20px rgba(101, 212, 183, 0.3);
+}
+
+/* Step heading */
+
+.step-card h3 {
+  margin: 0 0 8px;
+  color: var(--white, #f5f7fa);
+  font-size: 0.9rem;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.step-card:hover h3 {
+  transform: translateY(-2px);
+  color: var(--teal, #65d4b7);
+}
+
+/* Step description */
+
+.step-card p {
+  margin: 0;
+  color: var(--muted, #a2adb9);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.step-card:hover p {
+  transform: translateY(-1px);
+  color: #e0e8ef;
+}
+
+/* Response note */
+
+.response-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 560px;
+  margin: 30px auto 0;
+  padding: 18px 22px;
+  border: 1px solid rgba(101, 212, 183, 0.2);
+  background: rgba(101, 212, 183, 0.09);
+  text-align: left;
+}
+
+.response-note > span {
+  color: var(--teal, #65d4b7);
+  font-size: 1.5rem;
+}
+
+.response-note strong {
+  font-size: 0.85rem;
+}
+
+.response-note p {
+  margin: 5px 0 0;
+  color: var(--muted, #a2adb9);
+  font-size: 0.8rem;
+}
+
+/* ==========================================
+   CONFIRMATION SCREEN
+========================================== */
+
+.confirmation-page {
+  min-height: 70vh;
+  padding: 70px 20px;
+  background: var(--bg, #080b10);
+  color: var(--white, #f5f7fa);
+}
+
+.confirmation-card {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confirmation-icon {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--teal, #65d4b7);
+  color: #07110f;
+  font-size: 2.4rem;
+  font-weight: 900;
+  box-shadow: 0 0 0 9px rgba(101, 212, 183, 0.1);
+}
+
+.confirmation-card h1 {
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.confirmation-copy {
+  max-width: 610px;
+  margin: 0 auto;
+  color: var(--muted, #a2adb9);
+  line-height: 1.7;
+}
+
+.confirmation-number {
+  width: min(100%, 360px);
+  margin: 28px auto 40px;
+  padding: 19px;
+  border: 1px solid rgba(101, 212, 183, 0.2);
+  background: #111923;
+}
+
+.confirmation-number > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted, #a2adb9);
+  font-size: 0.8rem;
+}
+
+.confirmation-number > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.confirmation-number strong {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.confirmation-number button {
+  border: 0;
+  background: transparent;
+  color: var(--teal, #65d4b7);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.confirmation-number p {
+  margin: 8px 0 0;
+  color: var(--teal, #65d4b7);
+  font-size: 0.78rem;
+}
+
+.confirmation-next h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.confirmation-service {
+  margin-bottom: 25px;
+  color: var(--teal, #65d4b7);
+  font-size: 0.9rem;
+}
+
+.back-enquiry {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 14px 22px;
+  background: var(--teal, #65d4b7);
+  color: #07110f;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    filter 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.back-enquiry:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(101, 212, 183, 0.18);
+}
+
+/* ==========================================
+   RESPONSIVE STYLES
+========================================== */
+
+@media (max-width: 640px) {
+  .enquiry-page {
+    padding: 42px 14px 55px;
+  }
+
+  .enquiry-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .enquiry-tab {
+    padding: 13px 8px;
+    font-size: 0.84rem;
+  }
+
+  .enquiry-form {
+    padding: 22px 16px;
+  }
+
+  .form-grid,
+  .service-fields {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-fields {
+    margin: 20px 0;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .step-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .form-heading {
+    align-items: flex-start;
+  }
+
+  .response-note {
+    padding: 15px;
+    text-align: left;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .enquiry-tab,
+  .submit-enquiry,
+  .form-field input,
+  .form-field select,
+  .form-field textarea,
+  .step-card,
+  .step-number,
+  .step-card h3,
+  .step-card p,
+  .back-enquiry {
+    transition: none;
+  }
+
+  .service-fields .form-field {
+    animation: none;
+  }
+
+  .step-card:hover,
+  .step-card:hover .step-number,
+  .step-card:hover h3,
+  .step-card:hover p,
+  .back-enquiry:hover {
+    transform: none;
+  }
+}
+

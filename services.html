@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore STACKLY Technologies services, including managed IT services, cybersecurity, cloud solutions, and IT consulting.">
+
+  <title>Our Services | STACKLY Technologies</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
+</head>
+
+<body class="is-loading">
+
+  <!-- ORIGINAL STACKLY 3D LAPTOP PRELOADER -->
+  <div class="site-preloader" id="sitePreloader" role="status" aria-label="Loading STACKLY Technology">
+    <div class="preloader-content">
+
+      <div class="preloader-brand">
+        <span class="preloader-brand-mark">S</span>
+        <div>
+          <span class="preloader-brand-name">STACKLY</span>
+          <span class="preloader-brand-subtitle">TECHNOLOGY</span>
+        </div>
+      </div>
+
+      <p class="preloader-caption">INNOVATION STARTS HERE</p>
+
+      <div class="preloader-orbit">
+        <div class="preloader-ring preloader-ring-one"></div>
+        <div class="preloader-ring preloader-ring-two"></div>
+
+        <div class="laptop-scene">
+          <div class="laptop-3d" id="laptop3D">
+            <div class="laptop-screen">
+              <div class="laptop-screen-display">
+                <span class="laptop-screen-logo">S</span>
+                <span class="laptop-screen-line"></span>
+                <span class="laptop-screen-line short"></span>
+              </div>
+
+              <div class="laptop-screen-back">
+                <span>STACKLY</span>
+              </div>
+            </div>
+
+            <div class="laptop-base">
+              <div class="laptop-keyboard"></div>
+              <div class="laptop-trackpad"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="preloader-message" id="loadingMessage">
+        PREPARING YOUR EXPERIENCE
+      </p>
+
+      <div class="preloader-progress-info">
+        <span>LOADING</span>
+        <span id="loadingPercent">0%</span>
+      </div>
+
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar" id="loadingProgress"></div>
+      </div>
+
+      <p class="preloader-footer">
+        TECHNOLOGY THAT MOVES YOU FORWARD
+      </p>
+
+    </div>
+  </div>
+
+  <!-- WEBSITE HEADER -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+
+      <a href="index.html" class="brand" aria-label="STACKLY Technologies Home">
+        <img
+          src="assets/stackly%20logo.webp"
+          alt="STACKLY Technologies"
+          class="brand-logo"
+        >
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#home" class="nav-link">Home</a>
+
+        <a
+          href="services.html"
+          class="nav-link active"
+          aria-current="page"
+        >
+          Services
+        </a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+        
+
+        <a href="index.html#signup" class="signup-button">
+          <span>Sign Up</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="nav-actions">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="services-page">
+
+    <!-- PAGE HERO -->
+    <section class="services-hero">
+      <div class="services-hero-glow" aria-hidden="true"></div>
+
+      <div class="services-container services-hero-content">
+
+                <span class="services-eyebrow">WHAT WE DO</span>
+
+        <h1>Our <span>Services</span></h1>
+
+        <p>
+          We offer a wide range of services to meet your needs.
+          From dependable IT support to advanced security and cloud
+          solutions, we help your business move forward with confidence.
+        </p>
+
+        <a href="assets/404.html" class="services-hero-button">
+          Explore Our Services
+          <span aria-hidden="true">↘</span>
+        </a>
+
+      </div>
+
+      <div class="services-hero-decoration" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- SERVICES CONTENT -->
+    <section class="services-main-section" id="our-services">
+
+      <div class="services-container">
+
+        <!-- OUR SERVICES HEADING + TEAM IMAGE -->
+        <!-- KEEP THIS SECTION. DUPLICATE CONTENT BELOW IS REMOVED. -->
+        <div class="services-section-heading">
+
+          <div class="services-section-title">
+            <span class="services-eyebrow">
+              TECHNOLOGY THAT MOVES YOU FORWARD
+            </span>
+
+            <h2>Our <span>Services</span></h2>
+
+            <p class="services-heading-description">
+              Our solutions combine reliable support, modern infrastructure,
+              and strategic guidance to help your business work smarter.
+            </p>
+          </div>
+
+          <div class="services-team-image">
+            <img
+              src="images/ourservices.webp"
+              alt="Four colleagues collaborating around a table"
+              loading="lazy"
+            >
+
+            <div class="services-team-overlay">
+              <span class="services-team-indicator"></span>
+              <span>COLLABORATION · INNOVATION · GROWTH</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="services-layout">
+
+          <!-- SERVICES SIDEBAR -->
+          <aside class="services-sidebar">
+
+            <div class="services-sidebar-heading">
+              <span class="services-sidebar-icon" aria-hidden="true">✦</span>
+              <h3>Our Services</h3>
+            </div>
+
+            <p class="services-sidebar-description">
+              Explore our technology services and discover the right
+              solution for your business.
+            </p>
+
+            <nav class="services-category-nav" aria-label="Service categories">
+
+              <a
+                href="#managed-it"
+                class="service-category active"
+                data-service="managed-it"
+                aria-current="true"
+              >
+                <span class="service-category-number">01</span>
+                <span>Managed IT Services</span>
+                <span class="service-category-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="#cybersecurity"
+                class="service-category"
+                data-service="cybersecurity"
+              >
+                <span class="service-category-number">02</span>
+                <span>Cybersecurity</span>
+                <span class="service-category-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="#cloud-solutions"
+                class="service-category"
+                data-service="cloud-solutions"
+              >
+                <span class="service-category-number">03</span>
+                <span>Cloud Solutions</span>
+                <span class="service-category-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="#it-consulting"
+                class="service-category"
+                data-service="it-consulting"
+              >
+                <span class="service-category-number">04</span>
+                <span>IT Consulting</span>
+                <span class="service-category-arrow" aria-hidden="true">↗</span>
+              </a>
+
+            </nav>
+
+            <div class="services-sidebar-contact">
+              <span class="services-sidebar-contact-icon" aria-hidden="true">↗</span>
+
+              <h4>Need a solution?</h4>
+
+              <p>
+                Let's discuss how technology can help your business.
+              </p>
+
+              <a href="assets/404.html">
+                Make an Enquiry
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="services-sidebar-note">
+              <span class="services-sidebar-note-line"></span>
+
+              <p>
+                Smart technology.
+                <strong>Stronger business.</strong>
+              </p>
+            </div>
+
+          </aside>
+
+          <!-- SERVICE CARDS -->
+          <div class="services-content">
+
+            <!-- DUPLICATE services-intro REMOVED -->
+
+            <div class="services-card-grid">
+
+              <!-- SERVICE 1: MANAGED IT -->
+              <article class="service-card" id="managed-it" tabindex="0">
+
+                <div class="service-card-body">
+
+                  <div class="service-card-topline">
+                    <span>IT OPERATIONS</span>
+                    <span class="service-card-dot" aria-hidden="true"></span>
+                    <span class="service-card-index">01 / 04</span>
+                  </div>
+
+                  <h3>Managed IT Services</h3>
+
+                  <p class="service-description">
+                    Proactive support and management to keep your systems
+                    running smoothly.
+                  </p>
+
+                  <div class="service-details">
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">WHAT IT INCLUDES</span>
+                      <ul>
+                        <li>24/7 monitoring</li>
+                        <li>Helpdesk support</li>
+                      </ul>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">BEST FOR</span>
+                      <p>
+                        Businesses seeking reliable day-to-day IT support.
+                      </p>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">DELIVERY STYLE</span>
+                      <p>
+                        Ongoing managed service with flexible plans.
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <a href="assets/404.html" class="service-learn-more">
+                    Learn More
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                </div>
+
+                <div class="service-card-image service-image-managed">
+                  <img
+                    src="images/managed it service.webp"
+                    alt="Modern office workspace"
+                    loading="lazy"
+                  >
+
+                  <span class="service-card-number">01</span>
+                  <span class="service-image-caption">
+                    Reliable IT Operations
+                  </span>
+                </div>
+
+              </article>
+
+              <!-- SERVICE 2: CYBERSECURITY -->
+              <article class="service-card" id="cybersecurity" tabindex="0">
+
+                <div class="service-card-body">
+
+                  <div class="service-card-topline">
+                    <span>DIGITAL PROTECTION</span>
+                    <span class="service-card-dot" aria-hidden="true"></span>
+                    <span class="service-card-index">02 / 04</span>
+                  </div>
+
+                  <h3>Cybersecurity</h3>
+
+                  <p class="service-description">
+                    Protect your people, data and reputation.
+                  </p>
+
+                  <div class="service-details">
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">WHAT IT INCLUDES</span>
+                      <ul>
+                        <li>Threat detection</li>
+                        <li>Vulnerability review</li>
+                      </ul>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">BEST FOR</span>
+                      <p>
+                        Organisations that need stronger security and compliance.
+                      </p>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">DELIVERY STYLE</span>
+                      <p>
+                        Tailored solutions with expert setup and monitoring.
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <a href="assets/404.html" class="service-learn-more">
+                    Learn More
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                </div>
+
+                <div class="service-card-image service-image-security">
+                  <img
+                    src="images/cybersecurity.webp"
+                    alt="Cybersecurity and digital protection"
+                    loading="lazy"
+                  >
+
+                  <span class="service-card-number">02</span>
+                  <span class="service-image-caption">
+                    Security You Can Trust
+                  </span>
+                </div>
+
+              </article>
+
+              <!-- SERVICE 3: CLOUD SOLUTIONS -->
+              <article class="service-card" id="cloud-solutions" tabindex="0">
+
+                <div class="service-card-body">
+
+                  <div class="service-card-topline">
+                    <span>CONNECTED FUTURE</span>
+                    <span class="service-card-dot" aria-hidden="true"></span>
+                    <span class="service-card-index">03 / 04</span>
+                  </div>
+
+                  <h3>Cloud Solutions</h3>
+
+                  <p class="service-description">
+                    Modern, scalable cloud services to enable growth.
+                  </p>
+
+                  <div class="service-details">
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">WHAT IT INCLUDES</span>
+                      <ul>
+                        <li>Cloud migration</li>
+                        <li>Infrastructure management</li>
+                      </ul>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">BEST FOR</span>
+                      <p>
+                        Businesses looking to improve agility and reduce costs.
+                      </p>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">DELIVERY STYLE</span>
+                      <p>
+                        Project-based or managed service, depending on your needs.
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <a href="assets/404.html" class="service-learn-more">
+                    Learn More
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                </div>
+
+                <div class="service-card-image service-image-cloud">
+                  <img
+                    src="images/cloud solution.webp"
+                    alt="Connected digital cloud technology"
+                    loading="lazy"
+                  >
+
+                  <span class="service-card-number">03</span>
+                  <span class="service-image-caption">
+                    Connected Cloud Solutions
+                  </span>
+                </div>
+
+              </article>
+
+              <!-- SERVICE 4: IT CONSULTING -->
+              <article class="service-card" id="it-consulting" tabindex="0">
+
+                <div class="service-card-body">
+
+                  <div class="service-card-topline">
+                    <span>STRATEGIC GUIDANCE</span>
+                    <span class="service-card-dot" aria-hidden="true"></span>
+                    <span class="service-card-index">04 / 04</span>
+                  </div>
+
+                  <h3>IT Consulting</h3>
+
+                  <p class="service-description">
+                    Strategic advice to help you make the right technology decisions.
+                  </p>
+
+                  <div class="service-details">
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">WHAT IT INCLUDES</span>
+                      <ul>
+                        <li>IT strategy and planning</li>
+                        <li>Technology assessments</li>
+                      </ul>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">BEST FOR</span>
+                      <p>
+                        Organisations planning growth or change.
+                      </p>
+                    </div>
+
+                    <div class="service-detail">
+                      <span class="service-detail-label">DELIVERY STYLE</span>
+                      <p>
+                        Consultative projects with clear outcomes and recommendations.
+                      </p>
+                    </div>
+
+                  </div>
+
+                  <a href="assets/404.html" class="service-learn-more">
+                    Learn More
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                </div>
+
+                <div class="service-card-image service-image-consulting">
+                  <img
+                    src="images/IT consulting.webp"
+                    alt="Technology consulting team collaborating"
+                    loading="lazy"
+                  >
+
+                  <span class="service-card-number">04</span>
+                  <span class="service-image-caption">
+                    Technology With a Plan
+                  </span>
+                </div>
+
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="services-cta-section">
+      <div class="services-container">
+
+        <div class="services-cta-card">
+
+          <div class="services-cta-decoration" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="services-cta-content">
+
+            <span class="services-eyebrow">
+              LET'S BUILD SOMETHING BETTER
+            </span>
+
+            <h2>
+              Ready to Move Your Business <span>Forward?</span>
+            </h2>
+
+            <p>
+              Tell us what your business needs. Our team can help you
+              explore the right technology solutions.
+            </p>
+
+            <div class="services-cta-actions">
+
+              <a href="assets/404.html" class="services-cta-primary">
+                Start an Enquiry
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a href="contact.html" class="services-cta-secondary">
+                Contact Our Team
+              </a>
+
+            </div>
+          </div>
+
+          <div class="services-cta-symbol" aria-hidden="true">
+            S<span>.</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMON WEBSITE FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-main container">
+
+      <div class="footer-column footer-company">
+
+        <a href="index.html" class="footer-brand" aria-label="STACKLY Technologies Home">
+          <img
+            src="assets/stackly%20logo.webp"
+            alt="STACKLY Technologies"
+            class="footer-logo"
+            loading="lazy"
+          >
+        </a>
+
+        <p class="footer-tagline">
+          Technologies
+          <span>Building digital experiences that move you forward.</span>
+        </p>
+
+        <div class="footer-socials" aria-label="Social media links">
+
+          <a
+            href="assets/404.html"
+            class="social-link"
+            aria-label="STACKLY on X"
+            title="X"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-5-7.1L5.7 22H2.5l7.3-8.4L1.8 2h6.5l4.5 6.6L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <a
+            href="assets/404.html"
+            class="social-link"
+            aria-label="STACKLY on Instagram"
+            title="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.5" cy="6.8" r="1.1" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <a
+            href="assets/404.html"
+            class="social-link"
+            aria-label="STACKLY on LinkedIn"
+            title="LinkedIn"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 3.8a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3.3 9.5h3.4V21H3.3V9.5Zm5.5 0H12v1.6h.1a4 4 0 0 1 3.6-2c3.8 0 4.5 2.5 4.5 5.7V21h-3.5v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H8.8V9.5Z" fill="currentColor"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="footer-column footer-quick-links">
+        <h2 class="footer-heading">Quick Links</h2>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="enquiry.html">Enquiry</a>
+          
+        </nav>
+      </div>
+
+      <div class="footer-column footer-subscribe">
+        <h2 class="footer-heading">Stay Connected</h2>
+        <p class="footer-subscribe-text">Your email address</p>
+
+        <form class="footer-subscribe-form" id="footerSubscribeForm">
+          <label class="visually-hidden" for="footerEmail">
+            Your email address
+          </label>
+
+          <input
+            type="email"
+            id="footerEmail"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          >
+
+          <button type="submit" class="footer-subscribe-button">
+            Subscribe <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="footer-form-message" id="footerFormMessage" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+
+        <p class="footer-copyright">
+          <span class="copyright-symbol" aria-hidden="true">©</span>
+          <span id="currentYear">2026</span>
+          STACKLY IT. All rights reserved.
+        </p>
+
+        <nav class="footer-legal-links" aria-label="Legal links">
+          <a href="assets/404.html">Privacy</a>
+          <a href="assets/404.html">Terms</a>
+          <a href="assets/404.html">Cookies</a>
+        </nav>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ORIGINAL WEBSITE JAVASCRIPT -->
+  <script src="script.js"></script>
+
+  <!-- SERVICES PAGE INTERACTIONS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const categories = document.querySelectorAll(".service-category");
+      const cards = document.querySelectorAll(".service-card");
+
+      categories.forEach(function (category) {
+        category.addEventListener("click", function (event) {
+          const targetId = category.dataset.service;
+          const targetCard = document.getElementById(targetId);
+
+          if (!targetCard) {
+            return;
+          }
+
+          event.preventDefault();
+
+          categories.forEach(function (item) {
+            item.classList.remove("active");
+            item.removeAttribute("aria-current");
+          });
+
+          category.classList.add("active");
+          category.setAttribute("aria-current", "true");
+
+          targetCard.scrollIntoView({
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "auto"
+              : "smooth",
+            block: "start"
+          });
+
+          if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+            cards.forEach(function (card) {
+              card.classList.remove("service-card-selected");
+            });
+
+            targetCard.classList.add("service-card-selected");
+          }
+        });
+      });
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const matchingCategory = document.querySelector(
+              '.service-category[data-service="' + entry.target.id + '"]'
+            );
+
+            if (!matchingCategory) {
+              return;
+            }
+
+            categories.forEach(function (category) {
+              category.classList.remove("active");
+              category.removeAttribute("aria-current");
+            });
+
+            matchingCategory.classList.add("active");
+            matchingCategory.setAttribute("aria-current", "true");
+          });
+        }, {
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: 0
+        });
+
+        cards.forEach(function (card) {
+          observer.observe(card);
+        });
+      }
+
+      const year = document.getElementById("currentYear");
+
+      if (year) {
+        year.textContent = String(new Date().getFullYear());
+      }
+
+      const footerSubscribeForm = document.getElementById("footerSubscribeForm");
+      const footerEmail = document.getElementById("footerEmail");
+      const footerFormMessage = document.getElementById("footerFormMessage");
+
+      if (footerSubscribeForm && footerEmail && footerFormMessage) {
+        footerSubscribeForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!footerEmail.checkValidity()) {
+            footerEmail.reportValidity();
+            return;
+          }
+
+          footerFormMessage.textContent =
+            "Thanks! Email subscription needs to be connected to a service.";
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

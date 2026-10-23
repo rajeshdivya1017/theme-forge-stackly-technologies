@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | STACKLY Technologies</title>
+    <meta name="description" content="Create your STACKLY Technologies account.">
+
+    <meta name="theme-color" content="#050b18">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body class="is-loading register-page">
+
+    <!-- ORIGINAL STACKLY 3D LAPTOP PRELOADER -->
+
+    <div
+        class="site-preloader"
+        id="sitePreloader"
+        role="status"
+        aria-label="Loading STACKLY Technology"
+    >
+
+        <div class="preloader-content">
+
+            <div class="preloader-brand">
+                <span class="preloader-brand-mark">S</span>
+
+                <div>
+                    <span class="preloader-brand-name">STACKLY</span>
+                    <span class="preloader-brand-subtitle">TECHNOLOGY</span>
+                </div>
+            </div>
+
+            <p class="preloader-caption">INNOVATION STARTS HERE</p>
+
+            <div class="preloader-orbit">
+
+                <div class="preloader-ring preloader-ring-one"></div>
+                <div class="preloader-ring preloader-ring-two"></div>
+
+                <div class="laptop-scene">
+
+                    <div class="laptop-3d" id="laptop3D">
+
+                        <div class="laptop-screen">
+
+                            <div class="laptop-screen-display">
+                                <span class="laptop-screen-logo">S</span>
+                                <span class="laptop-screen-line"></span>
+                                <span class="laptop-screen-line short"></span>
+                            </div>
+
+                            <div class="laptop-screen-back">
+                                <span>STACKLY</span>
+                            </div>
+
+                        </div>
+
+                        <div class="laptop-base">
+                            <div class="laptop-keyboard"></div>
+                            <div class="laptop-trackpad"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="preloader-message" id="loadingMessage">
+                PREPARING YOUR EXPERIENCE
+            </p>
+
+            <div class="preloader-progress-info">
+                <span>LOADING</span>
+                <span id="loadingPercent">0%</span>
+            </div>
+
+            <div class="preloader-progress-track">
+                <div
+                    class="preloader-progress-bar"
+                    id="loadingProgress"
+                ></div>
+            </div>
+
+            <p class="preloader-footer">
+                TECHNOLOGY THAT MOVES YOU FORWARD
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- REGISTER PAGE -->
+
+    <main class="auth-main">
+
+        <div class="auth-background-glow glow-one"></div>
+        <div class="auth-background-glow glow-two"></div>
+
+        <div class="auth-container">
+
+            <!-- LEFT SIDE -->
+
+            <section class="auth-brand-panel">
+
+                <a
+                    href="index.html"
+                    class="auth-brand-logo"
+                    aria-label="STACKLY Technologies Home"
+                >
+                    <img
+                        src="assets/stackly%20logo.webp"
+                        alt="STACKLY Technologies"
+                    >
+                </a>
+
+                <span class="auth-eyebrow">
+                    <span class="auth-status-dot"></span>
+                    BUILD YOUR FUTURE
+                </span>
+
+                <h1>
+                    Your journey
+                    <span>starts here.</span>
+                </h1>
+
+                <p class="auth-description">
+                    Join the STACKLY Technologies community and take
+                    the next step towards innovative digital solutions.
+                    Create your account to get started.
+                </p>
+
+                <div class="auth-quote-card">
+
+                    <span class="auth-quote-mark">“</span>
+
+                    <blockquote>
+                        Every great achievement begins with the courage
+                        to take the first step.
+                    </blockquote>
+
+                    <div class="auth-quote-author">
+
+                        <span class="auth-quote-line"></span>
+
+                        <div>
+                            <strong>STACKLY Technologies</strong>
+                            <small>Innovate. Build. Transform.</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="auth-features">
+
+                    <div class="auth-feature">
+
+                        <span class="auth-feature-icon">✦</span>
+
+                        <div>
+                            <strong>Explore Innovation</strong>
+                            <small>Discover new possibilities</small>
+                        </div>
+
+                    </div>
+
+                    <div class="auth-feature">
+
+                        <span class="auth-feature-icon">✓</span>
+
+                        <div>
+                            <strong>Get Started</strong>
+                            <small>Your next chapter begins here</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE: REGISTER FORM -->
+
+            <section class="auth-form-panel">
+
+                <div class="auth-card">
+
+                    <div class="auth-card-top">
+                        <span class="auth-card-label">CREATE ACCOUNT</span>
+                        <span class="auth-card-icon">↗</span>
+                    </div>
+
+                    <div class="auth-heading">
+                        <h2>Create your account</h2>
+                        <p>Fill in your details to get started.</p>
+                    </div>
+
+                    <form id="registerForm" novalidate>
+
+                        <div class="auth-field">
+
+                            <label for="fullName">Full name</label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <small class="auth-error" id="nameError"></small>
+
+                        </div>
+
+
+                        <div class="auth-field">
+
+                            <label for="registerEmail">Email address</label>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <small
+                                class="auth-error"
+                                id="registerEmailError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="auth-field">
+
+                            <label for="registerPassword">Password</label>
+
+                            <div class="auth-password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    name="password"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="auth-toggle-password"
+                                    data-password="registerPassword"
+                                    aria-label="Show password"
+                                >
+                                    Show
+                                </button>
+
+                            </div>
+
+                            <small class="auth-hint">
+                                Use at least 8 characters.
+                            </small>
+
+                            <small
+                                class="auth-error"
+                                id="registerPasswordError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="auth-field">
+
+                            <label for="confirmPassword">Confirm password</label>
+
+                            <div class="auth-password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    placeholder="Re-enter your password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="auth-toggle-password"
+                                    data-password="confirmPassword"
+                                    aria-label="Show password"
+                                >
+                                    Show
+                                </button>
+
+                            </div>
+
+                            <small
+                                class="auth-error"
+                                id="confirmPasswordError"
+                            ></small>
+
+                        </div>
+
+
+                        <label class="auth-remember">
+
+                            <input type="checkbox" id="terms">
+
+                            <span>
+                                I agree to the terms and conditions.
+                            </span>
+
+                        </label>
+
+                        <small class="auth-error" id="termsError"></small>
+
+
+                        <div
+                            class="auth-message"
+                            id="registerMessage"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-submit"
+                            id="registerButton"
+                        >
+                            <span id="registerButtonText">Create Account</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                    </form>
+
+
+                    <div class="auth-divider">
+                        <span></span>
+                        <small>ALREADY A MEMBER?</small>
+                        <span></span>
+                    </div>
+
+
+                    <p class="auth-switch">
+                        Already have an account?
+
+                        <a href="signup.html" data-page-loader>
+                            Sign In
+                        </a>
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- NO COMMON HEADER OR FOOTER -->
+
+
+    <script src="script.js"></script>
+<script src="signup.js"></script>
+
+
+    <!-- AUTH PAGE NAVIGATION LOADER -->
+
+    <script>
+        (() => {
+            "use strict";
+
+            let navigating = false;
+
+            document.addEventListener("click", (event) => {
+                const target = event.target;
+
+                if (!(target instanceof Element)) {
+                    return;
+                }
+
+                const link = target.closest("a[data-page-loader]");
+
+                if (!(link instanceof HTMLAnchorElement)) {
+                    return;
+                }
+
+                if (
+                    event.ctrlKey ||
+                    event.metaKey ||
+                    event.shiftKey ||
+                    event.altKey ||
+                    event.button !== 0
+                ) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                if (navigating) {
+                    return;
+                }
+
+                navigating = true;
+
+                const destination = link.href;
+                const loader = document.getElementById("sitePreloader");
+
+                if (!loader) {
+                    sessionStorage.setItem("stacklySkipNextAuthLoader", "true");
+                    window.location.href = destination;
+                    return;
+                }
+
+                document.body.classList.add("is-loading");
+
+                loader.classList.remove("is-finished", "is-rotating");
+
+                const percentage = document.getElementById("loadingPercent");
+                const progress = document.getElementById("loadingProgress");
+                const message = document.getElementById("loadingMessage");
+
+                if (percentage) percentage.textContent = "0%";
+                if (progress) progress.style.width = "0%";
+
+                if (message) {
+                    message.textContent = "PREPARING YOUR EXPERIENCE";
+                }
+
+                void loader.offsetWidth;
+
+                window.setTimeout(() => {
+                    loader.classList.add("is-rotating");
+
+                    if (message) {
+                        message.textContent = "LOADING YOUR EXPERIENCE";
+                    }
+
+                    const duration = 2200;
+                    const start = performance.now();
+
+                    function updateProgress(now) {
+                        const ratio = Math.min((now - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - ratio, 3);
+                        const value = Math.round(eased * 100);
+
+                        if (percentage) percentage.textContent = value + "%";
+                        if (progress) progress.style.width = value + "%";
+
+                        if (ratio < 1) {
+                            requestAnimationFrame(updateProgress);
+                        } else {
+                            if (message) {
+                                message.textContent = "WELCOME TO STACKLY TECHNOLOGY";
+                            }
+
+                            window.setTimeout(() => {
+    sessionStorage.setItem("stacklySkipNextAuthLoader", "true");
+    window.location.href = destination;
+}, 350);
+                        }
+                    }
+
+                    requestAnimationFrame(updateProgress);
+
+                }, 1000);
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Page not found. Return to STACKLY IT and continue exploring."
+  >
+
+  <meta name="theme-color" content="#080b10">
+
+  <title>404 | Page Not Found — STACKLY IT</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Existing Website CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- 404 Page CSS -->
+  <link rel="stylesheet" href="404.css">
+
+  <!-- Existing Website JavaScript -->
+  <script src="../script.js" defer></script>
+
+  <!-- 404 Page JavaScript -->
+  <script src="404.js" defer></script>
+</head>
+
+<body class="error-page">
+
+  <!-- 404 PAGE CONTENT -->
+
+  <div class="error-site-content" id="errorSiteContent">
+
+    <!-- HEADER -->
+
+    <header class="error-header">
+
+      <div class="error-header-inner">
+
+        <!-- STACKLY LOGO -->
+
+        <a
+          href="../index.html"
+          class="error-brand"
+          data-loader-navigation
+          aria-label="STACKLY IT - Back to Home"
+        >
+          <img
+            src="stackly%20logo.webp"
+            alt="STACKLY IT"
+            class="error-brand-logo"
+          >
+        </a>
+
+        <!-- HEADER HOME BUTTON -->
+
+        <a
+          href="../index.html"
+          class="error-home-button"
+          data-loader-navigation
+        >
+          <span class="button-arrow" aria-hidden="true">↗</span>
+          <span>BACK TO HOME</span>
+        </a>
+
+      </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="error-main">
+
+      <section class="error-section">
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="system-status">
+
+          <span class="status-indicator" aria-hidden="true"></span>
+
+          <span>SYSTEM ALERT</span>
+
+          <span class="status-divider" aria-hidden="true"></span>
+
+          <span class="status-code">ERR_404</span>
+
+        </div>
+
+
+        <!-- AUTOMOTIVE SYSTEM FAILURE VISUAL -->
+
+        <div class="failure-visual" aria-hidden="true">
+
+          <div class="failure-grid"></div>
+
+          <div class="technical-ring technical-ring-outer"></div>
+
+          <div class="technical-ring technical-ring-inner"></div>
+
+          <div class="warning-line warning-line-top"></div>
+
+          <div class="warning-line warning-line-bottom"></div>
+
+
+          <!-- DAMAGED ELECTRICAL WIRES -->
+
+          <svg
+            class="damaged-wires"
+            viewBox="0 0 1000 300"
+            preserveAspectRatio="xMidYMid meet"
+          >
+
+            <defs>
+
+              <linearGradient
+                id="wireGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stop-color="#245477"></stop>
+                <stop offset="50%" stop-color="#65d4b7"></stop>
+                <stop offset="100%" stop-color="#245477"></stop>
+              </linearGradient>
+
+              <filter id="wireGlow">
+
+                <feGaussianBlur
+                  stdDeviation="3"
+                  result="blur"
+                ></feGaussianBlur>
+
+                <feMerge>
+                  <feMergeNode in="blur"></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+
+              </filter>
+
+            </defs>
+
+
+            <!-- Upper wire: disconnected -->
+
+            <path
+              class="wire wire-one"
+              d="M 0 70 L 170 70 L 205 105 L 340 105 L 375 70 L 445 70"
+              fill="none"
+              stroke="url(#wireGradient)"
+              stroke-width="3"
+              stroke-linecap="round"
+              filter="url(#wireGlow)"
+            ></path>
+
+            <path
+              class="wire wire-one"
+              d="M 555 70 L 625 70 L 660 105 L 795 105 L 830 70 L 1000 70"
+              fill="none"
+              stroke="url(#wireGradient)"
+              stroke-width="3"
+              stroke-linecap="round"
+              filter="url(#wireGlow)"
+            ></path>
+
+
+            <!-- Middle wire -->
+
+            <path
+              class="wire wire-two"
+              d="M 0 150 L 250 150 L 285 125 L 405 125"
+              fill="none"
+              stroke="#245477"
+              stroke-width="3"
+              stroke-linecap="round"
+            ></path>
+
+            <path
+              class="wire wire-two"
+              d="M 595 125 L 715 125 L 750 150 L 1000 150"
+              fill="none"
+              stroke="#245477"
+              stroke-width="3"
+              stroke-linecap="round"
+            ></path>
+
+
+            <!-- Lower wire -->
+
+            <path
+              class="wire wire-three"
+              d="M 0 230 L 190 230 L 225 200 L 360 200 L 390 230 L 440 230"
+              fill="none"
+              stroke="#65d4b7"
+              stroke-width="2"
+              stroke-linecap="round"
+            ></path>
+
+            <path
+              class="wire wire-three"
+              d="M 560 230 L 610 230 L 640 200 L 775 200 L 810 230 L 1000 230"
+              fill="none"
+              stroke="#65d4b7"
+              stroke-width="2"
+              stroke-linecap="round"
+            ></path>
+
+
+            <!-- Wire terminals -->
+
+            <circle cx="445" cy="70" r="5" fill="#65d4b7"></circle>
+            <circle cx="555" cy="70" r="5" fill="#65d4b7"></circle>
+
+            <circle cx="405" cy="125" r="5" fill="#245477"></circle>
+            <circle cx="595" cy="125" r="5" fill="#245477"></circle>
+
+            <circle cx="440" cy="230" r="4" fill="#65d4b7"></circle>
+            <circle cx="560" cy="230" r="4" fill="#65d4b7"></circle>
+
+          </svg>
+
+
+          <!-- LARGE 404 NUMBER -->
+
+          <div class="failure-number">
+
+            <span class="number-glow">404</span>
+
+            <span class="number-outline">404</span>
+
+          </div>
+
+
+          <!-- SYSTEM INTERRUPTION -->
+
+          <div class="system-interruption">
+
+            <div class="interruption-line"></div>
+
+            <div class="interruption-core">
+              <div class="core-inner"></div>
+            </div>
+
+            <div class="interruption-line"></div>
+
+          </div>
+
+
+          <!-- TECHNICAL LABELS -->
+
+          <span class="visual-label visual-label-left">
+            CONNECTION_LOST
+          </span>
+
+          <span class="visual-label visual-label-right">
+            ROUTE_NOT_FOUND
+          </span>
+
+
+          <!-- SCANNING EFFECT -->
+
+          <div class="scan-line"></div>
+
+        </div>
+
+
+        <!-- ERROR MESSAGE -->
+
+        <div class="error-message">
+
+          <p class="error-eyebrow">
+            DESTINATION UNAVAILABLE
+          </p>
+
+          <h1>
+            PAGE
+            <span>NOT FOUND</span>
+          </h1>
+
+          <p class="error-description">
+            Looks like this route has lost its connection.
+            The page you're searching for may have been moved,
+            removed, or is temporarily unavailable.
+          </p>
+
+        </div>
+
+
+        <!-- SYSTEM DIAGNOSTICS -->
+
+        <div class="error-diagnostics">
+
+          <div class="diagnostic-item">
+
+            <span class="diagnostic-label">ERROR CODE</span>
+
+            <span class="diagnostic-value">404</span>
+
+          </div>
+
+          <div class="diagnostic-item">
+
+            <span class="diagnostic-label">SYSTEM STATUS</span>
+
+            <span class="diagnostic-value diagnostic-warning">
+              DISCONNECTED
+            </span>
+
+          </div>
+
+          <div class="diagnostic-item">
+
+            <span class="diagnostic-label">RECOVERY MODE</span>
+
+            <span class="diagnostic-value diagnostic-ready">
+              AVAILABLE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="error-actions">
+
+          <button
+            type="button"
+            class="error-back-button"
+            id="errorBackButton"
+          >
+            <span aria-hidden="true">←</span>
+            <span>GO BACK</span>
+          </button>
+
+
+          <a
+            href="../index.html"
+            class="error-home-main-button"
+            data-loader-navigation
+          >
+            <span>BACK TO HOME</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+
+
+        <!-- BOTTOM LABEL -->
+
+        <div class="error-bottom-note">
+
+          <span class="bottom-note-line"></span>
+
+          <span>STACKLY SYSTEM RECOVERY</span>
+
+          <span class="bottom-note-line"></span>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="error-footer">
+
+      <div class="error-footer-inner">
+
+        <!-- LEFT SIDE COPYRIGHT -->
+
+        <p class="error-copyright">
+          <span class="copyright-symbol">©</span>
+          <span>2026 STACKLY IT. All rights reserved.</span>
+        </p>
+
+
+        <!-- RIGHT SIDE LINKS -->
+
+        <nav class="error-legal-links" aria-label="Legal links">
+
+          <a href="privacy.html">Privacy</a>
+
+          <span class="legal-separator" aria-hidden="true"></span>
+
+          <a href="terms.html">Terms</a>
+
+          <span class="legal-separator" aria-hidden="true"></span>
+
+          <a href="cookies.html">Cookies</a>
+
+        </nav>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
+

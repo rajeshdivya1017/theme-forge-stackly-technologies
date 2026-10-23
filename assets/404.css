@@ -1,0 +1,1249 @@
+
+/* =========================================================
+   STACKLY IT — AUTOMOTIVE SYSTEM FAILURE 404 PAGE
+   File: 404.css
+   Theme: Premium Dark / Blue / Teal
+========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES AND RESET
+========================================================= */
+
+.error-page {
+  --error-bg: #080b10;
+  --error-bg-light: #0d131b;
+  --error-panel: #101923;
+  --error-blue: #245477;
+  --error-blue-light: #3982ad;
+  --error-teal: #65d4b7;
+  --error-white: #f5f7fa;
+  --error-muted: #9ba8b6;
+  --error-border: rgba(101, 212, 183, 0.17);
+
+  margin: 0;
+  min-height: 100vh;
+  background: var(--error-bg);
+  color: var(--error-white);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.error-page *,
+.error-page *::before,
+.error-page *::after {
+  box-sizing: border-box;
+}
+
+.error-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.error-page button {
+  font: inherit;
+}
+
+.error-page img,
+.error-page svg {
+  max-width: 100%;
+}
+
+.error-site-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(36, 84, 119, 0.10),
+      transparent 48%
+    ),
+    var(--error-bg);
+}
+
+
+/* =========================================================
+   02. HEADER
+========================================================= */
+
+.error-header {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background: rgba(8, 11, 16, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.error-header-inner {
+  width: min(1200px, calc(100% - 64px));
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.error-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.error-brand:hover {
+  opacity: 0.82;
+}
+
+.error-brand-logo {
+  display: block;
+  width: 160px;
+  height: 52px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.error-home-button {
+  min-height: 45px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1px solid rgba(101, 212, 183, 0.4);
+  background: rgba(101, 212, 183, 0.055);
+  color: var(--error-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.error-home-button:hover {
+  background: var(--error-teal);
+  border-color: var(--error-teal);
+  color: #07110f;
+  transform: translateY(-2px);
+}
+
+.button-arrow {
+  color: var(--error-teal);
+  font-size: 17px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.error-home-button:hover .button-arrow {
+  color: #07110f;
+}
+
+
+/* =========================================================
+   03. MAIN LAYOUT
+========================================================= */
+
+.error-main {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px 56px;
+}
+
+.error-section {
+  position: relative;
+  width: min(100%, 960px);
+  margin: 0 auto;
+  text-align: center;
+  animation: errorContentEnter 0.8s ease both;
+}
+
+@keyframes errorContentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   04. SYSTEM STATUS
+========================================================= */
+
+.system-status {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 24px;
+  padding: 6px 13px;
+  border: 1px solid rgba(255, 95, 95, 0.22);
+  background: rgba(255, 75, 75, 0.045);
+  color: #e2a4a4;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.status-indicator {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ff6464;
+  box-shadow: 0 0 10px rgba(255, 100, 100, 0.65);
+  animation: statusBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes statusBlink {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 100, 100, 0.65);
+  }
+
+  50% {
+    opacity: 0.45;
+    box-shadow: 0 0 3px rgba(255, 100, 100, 0.2);
+  }
+}
+
+.status-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(226, 164, 164, 0.35);
+}
+
+.status-code {
+  color: var(--error-teal);
+}
+
+
+/* =========================================================
+   05. FAILURE VISUAL CONTAINER
+========================================================= */
+
+.failure-visual {
+  position: relative;
+  width: min(100%, 790px);
+  height: 300px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.failure-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-image:
+    linear-gradient(
+      rgba(101, 212, 183, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(101, 212, 183, 0.045) 1px,
+      transparent 1px
+    );
+  background-size: 34px 34px;
+  mask-image: radial-gradient(
+    ellipse at center,
+    #000 10%,
+    transparent 77%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 10%,
+    transparent 77%
+  );
+}
+
+.failure-visual::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  width: 360px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(36, 84, 119, 0.15);
+  filter: blur(70px);
+  animation: failureGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes failureGlow {
+  from {
+    opacity: 0.45;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.failure-visual::after {
+  content: "";
+  position: absolute;
+  inset: 12px 0;
+  border-top: 1px solid rgba(101, 212, 183, 0.10);
+  border-bottom: 1px solid rgba(101, 212, 183, 0.10);
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   06. TECHNICAL RINGS
+========================================================= */
+
+.technical-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.technical-ring-outer {
+  width: 270px;
+  height: 270px;
+  border: 1px dashed rgba(101, 212, 183, 0.23);
+  animation: outerRingRotate 32s linear infinite;
+}
+
+.technical-ring-outer::before,
+.technical-ring-outer::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--error-teal);
+  background: var(--error-bg);
+  transform: rotate(45deg);
+}
+
+.technical-ring-outer::before {
+  top: 30px;
+  left: 25px;
+}
+
+.technical-ring-outer::after {
+  right: 25px;
+  bottom: 30px;
+}
+
+.technical-ring-inner {
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(36, 84, 119, 0.25);
+  border-left-color: rgba(101, 212, 183, 0.6);
+  border-right-color: rgba(101, 212, 183, 0.6);
+  animation: innerRingRotate 18s linear infinite;
+}
+
+@keyframes outerRingRotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes innerRingRotate {
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+
+/* =========================================================
+   07. DAMAGED ELECTRICAL WIRES
+========================================================= */
+
+.damaged-wires {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wire {
+  stroke-dasharray: 9 5;
+  animation: wireSignal 2.4s linear infinite;
+}
+
+.wire-one {
+  animation-duration: 2s;
+}
+
+.wire-two {
+  animation-duration: 2.8s;
+  animation-direction: reverse;
+}
+
+.wire-three {
+  animation-duration: 3.2s;
+}
+
+@keyframes wireSignal {
+  from {
+    stroke-dashoffset: 70;
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.65;
+  }
+}
+
+
+/* =========================================================
+   08. LARGE 404 TYPOGRAPHY
+========================================================= */
+
+.failure-number {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.number-glow,
+.number-outline {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(145px, 23vw, 245px);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -8px;
+}
+
+.number-glow {
+  position: relative;
+  color: rgba(101, 212, 183, 0.08);
+  text-shadow:
+    0 0 25px rgba(101, 212, 183, 0.13),
+    0 0 70px rgba(36, 84, 119, 0.16);
+}
+
+.number-outline {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(101, 212, 183, 0.68);
+  text-shadow: 0 0 20px rgba(101, 212, 183, 0.07);
+  animation: numberFlicker 5s ease-in-out infinite;
+}
+
+@keyframes numberFlicker {
+  0%,
+  90%,
+  94%,
+  100% {
+    opacity: 1;
+  }
+
+  91%,
+  93% {
+    opacity: 0.4;
+  }
+
+  92% {
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================================
+   09. CENTRAL SYSTEM INTERRUPTION
+========================================================= */
+
+.system-interruption {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.interruption-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--error-teal)
+  );
+}
+
+.interruption-line:last-child {
+  background: linear-gradient(
+    90deg,
+    var(--error-teal),
+    transparent
+  );
+}
+
+.interruption-core {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--error-teal);
+  background: var(--error-bg);
+  transform: rotate(45deg);
+  box-shadow: 0 0 18px rgba(101, 212, 183, 0.18);
+  animation: corePulse 1.8s ease-in-out infinite;
+}
+
+.core-inner {
+  width: 6px;
+  height: 6px;
+  background: var(--error-teal);
+  box-shadow: 0 0 9px var(--error-teal);
+}
+
+@keyframes corePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 9px rgba(101, 212, 183, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 22px rgba(101, 212, 183, 0.55);
+  }
+}
+
+
+/* =========================================================
+   10. WARNING LINES AND TECHNICAL LABELS
+========================================================= */
+
+.warning-line {
+  position: absolute;
+  left: 50%;
+  width: 82%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 100, 100, 0.28),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+.warning-line-top {
+  top: 18%;
+}
+
+.warning-line-bottom {
+  bottom: 18%;
+}
+
+.visual-label {
+  position: absolute;
+  z-index: 4;
+  padding: 5px 8px;
+  border: 1px solid rgba(101, 212, 183, 0.14);
+  background: rgba(8, 11, 16, 0.86);
+  color: rgba(101, 212, 183, 0.8);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+}
+
+.visual-label-left {
+  left: 4%;
+  top: 38%;
+}
+
+.visual-label-right {
+  right: 4%;
+  bottom: 35%;
+}
+
+
+/* =========================================================
+   11. SCANNING EFFECT
+========================================================= */
+
+.scan-line {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(101, 212, 183, 0.75),
+    transparent
+  );
+  opacity: 0.7;
+  box-shadow: 0 0 16px rgba(101, 212, 183, 0.25);
+  animation: scanDown 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scanDown {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0.7;
+  }
+
+  88% {
+    opacity: 0.7;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   12. ERROR MESSAGE
+========================================================= */
+
+.error-message {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.error-eyebrow {
+  margin: 0 0 12px;
+  color: var(--error-teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.error-message h1 {
+  margin: 0;
+  color: var(--error-white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(44px, 7vw, 76px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.error-message h1 span {
+  display: block;
+  margin-top: 4px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--error-teal);
+  text-shadow: 0 0 28px rgba(101, 212, 183, 0.07);
+}
+
+.error-description {
+  max-width: 550px;
+  margin: 20px auto 0;
+  color: var(--error-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   13. SYSTEM DIAGNOSTICS
+========================================================= */
+
+.error-diagnostics {
+  width: min(100%, 590px);
+  margin: 30px auto 0;
+  padding: 17px 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--error-border);
+  border-bottom: 1px solid var(--error-border);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(101, 212, 183, 0.035),
+    transparent
+  );
+}
+
+.diagnostic-item {
+  min-width: 0;
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.diagnostic-item + .diagnostic-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.diagnostic-label {
+  color: #788695;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.diagnostic-value {
+  color: var(--error-white);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.diagnostic-warning {
+  color: #ff7777;
+}
+
+.diagnostic-ready {
+  color: var(--error-teal);
+}
+
+
+/* =========================================================
+   14. ACTION BUTTONS
+========================================================= */
+
+.error-actions {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.error-back-button,
+.error-home-main-button {
+  position: relative;
+  min-width: 175px;
+  min-height: 51px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.error-back-button {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: var(--error-white);
+}
+
+.error-back-button > span:first-child {
+  font-size: 18px;
+  color: var(--error-teal);
+  transition: transform 0.3s ease;
+}
+
+.error-back-button:hover {
+  border-color: var(--error-teal);
+  background: rgba(101, 212, 183, 0.055);
+  transform: translateY(-3px);
+}
+
+.error-back-button:hover > span:first-child {
+  transform: translateX(-4px);
+}
+
+.error-home-main-button {
+  border: 1px solid var(--error-teal);
+  background: var(--error-teal);
+  color: #07110f;
+}
+
+.error-home-main-button > span:last-child {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.error-home-main-button:hover {
+  background: transparent;
+  color: var(--error-teal);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(101, 212, 183, 0.08);
+}
+
+.error-home-main-button:hover > span:last-child {
+  transform: translate(3px, -3px);
+}
+
+.error-back-button:focus-visible,
+.error-home-main-button:focus-visible,
+.error-home-button:focus-visible,
+.error-brand:focus-visible,
+.error-legal-links a:focus-visible {
+  outline: 2px solid var(--error-teal);
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   15. BOTTOM TECHNICAL LABEL
+========================================================= */
+
+.error-bottom-note {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #687989;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2.7px;
+}
+
+.bottom-note-line {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(101, 212, 183, 0.45)
+  );
+}
+
+.bottom-note-line:last-child {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.error-footer {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  background: #070a0e;
+}
+
+.error-footer-inner {
+  width: min(1200px, calc(100% - 64px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.error-copyright {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #8995a2;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.copyright-symbol {
+  color: var(--error-teal);
+  font-size: 14px;
+}
+
+.error-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.error-legal-links a {
+  color: #8995a2;
+  font-size: 10px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.error-legal-links a:hover {
+  color: var(--error-teal);
+}
+
+.legal-separator {
+  width: 3px;
+  height: 3px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--error-teal);
+}
+
+
+/* =========================================================
+   17. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .error-header-inner,
+  .error-footer-inner {
+    width: calc(100% - 44px);
+  }
+
+  .error-main {
+    padding: 40px 22px 48px;
+  }
+
+  .failure-visual {
+    height: 270px;
+  }
+
+  .technical-ring-outer {
+    width: 240px;
+    height: 240px;
+  }
+
+  .technical-ring-inner {
+    width: 190px;
+    height: 190px;
+  }
+
+  .number-glow,
+  .number-outline {
+    font-size: clamp(150px, 25vw, 220px);
+  }
+
+  .visual-label-left {
+    left: 2%;
+  }
+
+  .visual-label-right {
+    right: 2%;
+  }
+}
+
+
+/* =========================================================
+   18. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .error-header-inner {
+    width: calc(100% - 32px);
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .error-brand-logo {
+    width: 130px;
+    height: 43px;
+  }
+
+  .error-home-button {
+    min-height: 40px;
+    padding: 0 11px;
+    gap: 7px;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .button-arrow {
+    font-size: 15px;
+  }
+
+  .error-main {
+    padding: 34px 17px 42px;
+  }
+
+  .system-status {
+    gap: 8px;
+    margin-bottom: 17px;
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+
+  .failure-visual {
+    height: 215px;
+    margin-bottom: 16px;
+  }
+
+  .technical-ring-outer {
+    width: 185px;
+    height: 185px;
+  }
+
+  .technical-ring-inner {
+    width: 145px;
+    height: 145px;
+  }
+
+  .number-glow,
+  .number-outline {
+    font-size: clamp(135px, 37vw, 185px);
+    letter-spacing: -5px;
+  }
+
+  .system-interruption {
+    width: min(290px, 85%);
+    gap: 8px;
+  }
+
+  .interruption-core {
+    width: 15px;
+    height: 15px;
+  }
+
+  .visual-label {
+    padding: 4px 5px;
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .visual-label-left {
+    left: 0;
+    top: 20%;
+  }
+
+  .visual-label-right {
+    right: 0;
+    bottom: 18%;
+  }
+
+  .warning-line-top {
+    top: 10%;
+  }
+
+  .warning-line-bottom {
+    bottom: 10%;
+  }
+
+  .error-eyebrow {
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .error-message h1 {
+    font-size: clamp(43px, 10vw, 58px);
+    line-height: 1;
+  }
+
+  .error-description {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  .error-diagnostics {
+    margin-top: 23px;
+    padding: 15px 2px;
+  }
+
+  .diagnostic-item {
+    padding: 2px 4px;
+    gap: 7px;
+  }
+
+  .diagnostic-label {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+
+  .diagnostic-value {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+
+  .error-actions {
+    margin-top: 23px;
+    gap: 10px;
+  }
+
+  .error-back-button,
+  .error-home-main-button {
+    min-width: 145px;
+    min-height: 47px;
+    padding: 0 14px;
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .error-bottom-note {
+    margin-top: 28px;
+    gap: 9px;
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+
+  .bottom-note-line {
+    width: 27px;
+  }
+
+  .error-footer-inner {
+    width: calc(100% - 32px);
+    min-height: auto;
+    padding: 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .error-copyright {
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .error-legal-links {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .error-legal-links a {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   19. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .error-header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .error-brand-logo {
+    width: 108px;
+    height: 39px;
+  }
+
+  .error-home-button {
+    padding: 0 8px;
+    font-size: 8px;
+  }
+
+  .failure-visual {
+    height: 185px;
+  }
+
+  .technical-ring-outer {
+    width: 160px;
+    height: 160px;
+  }
+
+  .technical-ring-inner {
+    width: 125px;
+    height: 125px;
+  }
+
+  .number-glow,
+  .number-outline {
+    font-size: 130px;
+  }
+
+  .visual-label {
+    font-size: 6px;
+  }
+
+  .error-message h1 {
+    font-size: 40px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-back-button,
+  .error-home-main-button {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .diagnostic-label {
+    font-size: 6px;
+  }
+
+  .diagnostic-value {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   20. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .error-page *,
+  .error-page *::before,
+  .error-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
